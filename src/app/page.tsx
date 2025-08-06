@@ -1,103 +1,94 @@
 import Image from "next/image";
+import Logo from "../../public/logo.svg";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="bg-black text-white font-sans overflow-hidden w-full max-w-full">
+      {/* Banner */}
+      <div
+        className="text-sm font-bold text-center bg-gradient-to-r from-[#FC004E] to-[#10CBE0] w-full"
+        style={{
+          height: "auto",
+          opacity: 1,
+          padding: "10px 20px",
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+          textAlign: "center",
+        }}
+      >
+        🎉 <span className="text-[#00C6FF] mx-1">FRESH BEGINNINGS SALE:</span>
+        <span className="text-white mx-1">Extra 25% OFF, Limited Spots -</span>
+        <span className="text-[#10CBE0] mx-1">start your journey today!</span>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Header */}
+      <header className="max-w-screen-xl mx-auto px-6 py-5 flex justify-between items-center text-base">
+        <div className="w-32 md:w-40">
+          <Image src="/logo.svg" alt="Logo" width={160} height={50} />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <nav className="hidden md:flex gap-10 text-sm">
+          <a href="#" className="text-white">About us</a>
+          <a href="#" className="text-white">Contact</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative w-full max-w-screen-2xl mx-auto px-4 md:px-12 overflow-hidden pb-12">
+        {/* Mobile Image First */}
+        <div className="block md:hidden w-full max-w-[666px] mx-auto mb-10">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/mobile.svg"
+            alt="App Preview"
+            width={666}
+            height={679}
+            className="w-full h-auto"
+            style={{ opacity: 1 }}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+
+        {/* Layout Wrapper */}
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 bg-transparent">
+          {/* Left Content */}
+          <div className="flex flex-col gap-6 bg-transparent w-full max-w-[516px] h-auto px-4 md:px-0">
+            <div>
+              <h1 className="text-[28px] md:text-[38px] font-bold mb-4 text-left text-white leading-tight">
+                Want to Turn Social Media Into a <span className="block">Profitable Career?</span>
+              </h1>
+              <p className="text-[18px] md:text-[20px] font-bold mb-5 text-left text-[#00C6FF]">
+                Discover your way to success with <span className="text-[#FF007F]">Fametonic:</span>
+              </p>
+              <ul className="list-disc list-inside space-y-3 text-base mb-6 text-white">
+                <li>Start growing your influence right away—no waiting required</li>
+                <li>Create viral TikToks and Reels step by step with easy-to-follow lessons</li>
+                <li>Use a Personal AI Worker to boost your content</li>
+                <li>Learn from expert-led courses designed for aspiring influencers</li>
+              </ul>
+              <button className="bg-[#FF007F] text-white font-bold px-6 py-3 rounded text-sm w-full md:w-auto">
+                GET STARTED →
+              </button>
+              <p className="text-xs text-gray-400 mt-3">
+                By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms.
+              </p>
+              <p className="text-xs text-gray-400">Fametonic 2025. © All Rights Reserved.</p>
+            </div>
+          </div>
+
+          {/* Right Image Desktop Only */}
+          <div className="hidden md:block w-full max-w-[666px] bg-transparent">
+            <Image
+              src="/mobile.svg"
+              alt="App Preview"
+              width={666}
+              height={679}
+              className="w-full h-auto"
+              style={{ opacity: 1 }}
+            />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
