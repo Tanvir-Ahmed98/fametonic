@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../public/logo.svg";
+
 
 export default function HomePage() {
   return (
@@ -70,7 +70,7 @@ export default function HomePage() {
                 GET STARTED →
               </button>
               <p className="text-xs text-gray-400 mt-3">
-                By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms.
+                By clicking  &quot;Get Started&quot;, you agree with Terms and Conditions, Privacy Policy, Subscription Terms.
               </p>
               <p className="text-xs text-gray-400">Fametonic 2025. © All Rights Reserved.</p>
             </div>
