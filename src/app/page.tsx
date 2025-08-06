@@ -70,8 +70,8 @@ export default function HomePage() {
                 GET STARTED →
               </button>
               <p className="text-xs text-gray-400 mt-3">
-                By clicking  &quot;Get Started&quot;, you agree with Terms and Conditions, Privacy Policy, Subscription Terms.
-              </p>
+  By clicking &quot;Get Started&quot;, you agree to our <a href="/terms" className="underline">Terms and Conditions</a>, <a href="/privacy" className="underline">Privacy Policy</a>, and <a href="/subscription" className="underline">Subscription Terms</a>.
+</p>
               <p className="text-xs text-gray-400">Fametonic 2025. © All Rights Reserved.</p>
             </div>
           </div>
